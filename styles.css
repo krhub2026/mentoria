@@ -1,0 +1,57 @@
+:root { color-scheme: dark; font-family: Arial, Helvetica, sans-serif; color: #f5f1e9; background: #080705; --gold: #edc574; --muted: #b3aa9a; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+body.modal-open { overflow: hidden; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+.landing { min-height: 100vh; min-height: 100svh; display: grid; place-content: center; background: radial-gradient(ellipse at center, #2a1d0d, #080705 72%); }
+.poster { position: relative; width: min(100vw, calc(100svh * 1092 / 1440)); margin: 0 auto; }
+.poster-image { display: block; width: 100%; height: auto; }
+.registration-trigger { position: absolute; left: 23.26%; top: 92.33%; transform: translateY(-50%); width: 53.39%; height: 6.05%; min-height: 44px; padding: 0; border: 0; border-radius: 100px; background: transparent; -webkit-tap-highlight-color: transparent; }
+.registration-trigger:hover { box-shadow: 0 0 24px #ffc96255; }
+.registration-trigger:focus-visible { outline: 3px solid #fff4ca; outline-offset: 5px; box-shadow: 0 0 25px #edc574; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+.noscript { padding: 1rem; text-align: center; }
+a { color: var(--gold); }
+dialog { width: min(600px, calc(100% - 32px)); max-height: calc(100vh - 32px); max-height: calc(100dvh - 32px); padding: 0; border: 1px solid #826136; border-radius: 24px; background: #14120f; color: #f5f1e9; box-shadow: 0 30px 100px #0009; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: #776041 #14120f; }
+dialog::backdrop { background: #000b; backdrop-filter: blur(7px); }
+.dialog-content { position: relative; padding: 34px; }
+.close-dialog { position: absolute; top: 14px; right: 14px; display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid #494035; border-radius: 50%; background: #211e18; color: #ded6c9; }
+.close-dialog:hover { background: #393022; }
+svg { width: 22px; height: 22px; flex-shrink: 0; }
+.eyebrow { margin: 0 40px 14px 0; font-size: 10px; font-weight: 700; letter-spacing: 2.5px; color: var(--gold); }
+h1 { margin: 0; font-family: Georgia, 'Times New Roman', serif; font-size: 36px; line-height: 1.1; font-weight: 400; letter-spacing: -.8px; }
+h1 span { color: var(--gold); }
+header > p:last-child { color: var(--muted); font-size: 13px; line-height: 1.5; margin: 13px 0 20px; }
+.investment { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 15px 18px; margin-bottom: 22px; background: linear-gradient(120deg, #352a19, #201b13); border: 1px solid #66502e; border-radius: 12px; }
+.investment-label { display: block; margin-bottom: 5px; color: #d4bc95; font-size: 9px; letter-spacing: 1.8px; }
+.investment strong { display: block; font-size: 30px; font-weight: 600; letter-spacing: -1px; color: #f4d899; white-space: nowrap; }
+.investment strong span { font-size: 20px; }
+.investment p { margin: 0; font-size: 11px; line-height: 1.6; text-align: right; color: #c5b9a3; }
+.investment b { font-weight: 400; color: #eed4a4; }
+.fields { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 14px; }
+.field { min-width: 0; }
+.full { grid-column: 1 / -1; }
+.field label, legend { display: block; margin-bottom: 7px; color: #e5dfd4; font-size: 12px; font-weight: 600; }
+.field input { display: block; width: 100%; min-height: 46px; padding: 12px; border: 1px solid #494136; border-radius: 8px; background: #1d1a16; color: #fff8ec; font-size: 16px; outline: none; }
+.field input::placeholder { color: #948a7b; font-size: 13px; }
+.field input:focus { border-color: var(--gold); box-shadow: 0 0 0 3px #edc57415; }
+.field input:user-invalid { border-color: #ec9a84; }
+.field small { display: block; font-size: 10px; line-height: 1.4; color: var(--muted); margin-top: 5px; }
+.payment { padding: 0; margin: 22px 0 0; border: 0; min-width: 0; }
+.payment legend { padding: 0; margin-bottom: 10px; }
+.payment-options { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.payment-option { position: relative; cursor: pointer; }
+.payment-option input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.payment-option span { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 50px; padding: 8px; border: 1px solid #494136; border-radius: 9px; color: #c9bfaf; font-size: 13px; background: #1d1a16; }
+.payment-option:hover span { border-color: #a78a56; }
+.payment-option input:checked + span { color: #ffe4a8; border-color: var(--gold); background: #3b2e18; box-shadow: inset 0 0 0 1px var(--gold); }
+.payment-option input:focus-visible + span, button:focus-visible { outline: 2px solid #fff1cb; outline-offset: 4px; }
+.form-status { min-height: 16px; margin: 16px 0 9px; color: var(--muted); font-size: 11px; line-height: 1.45; }
+.submit-button { display: flex; width: 100%; justify-content: center; align-items: center; gap: 12px; padding: 15px; min-height: 52px; border: 1px solid #ffe7af; border-radius: 10px; color: #211604; background: linear-gradient(110deg, #d8a54d, #ffe2a0 55%, #d9a244); font-weight: 700; font-size: 15px; }
+.submit-button:hover:enabled { filter: brightness(1.08); }
+.submit-button:disabled { opacity: .4; cursor: not-allowed; }
+.privacy-note { margin: 12px 10px 0; color: var(--muted); font-size: 10px; line-height: 1.6; text-align: center; }
+@media (max-width: 600px) { .poster { width: 100vw; } }
+@media (max-width: 480px) { dialog { width: calc(100% - 20px); max-height: calc(100dvh - 20px); border-radius: 18px; } .dialog-content { padding: 30px 20px 24px; } h1 { font-size: 32px; } .fields { grid-template-columns: 1fr; gap: 14px; } .investment { padding: 14px; } .investment strong { font-size: 28px; } .investment p { font-size: 10px; } .payment-options { gap: 7px; } .payment-option span { gap: 6px; font-size: 12px; } }
+@media (prefers-reduced-motion: no-preference) { button, .payment-option span { transition: background .15s, box-shadow .15s, opacity .15s; } dialog[open] { animation: appear .18s ease-out; } @keyframes appear { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } } }

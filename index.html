@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100d08">
+  <meta name="description" content="Mentoria DNA de Vendas: 60 dias de acompanhamento on-line. Cadastre seu interesse na turma com início em 29/11/2026. Investimento de R$ 497,00.">
+  <title>Mentoria DNA de Vendas | Cadastro</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <main class="landing" aria-label="Mentoria DNA de Vendas">
+    <div class="poster">
+      <img class="poster-image" src="./assets/mentoria-dna-de-vendas.png" width="1092" height="1440" fetchpriority="high" alt="Mentoria DNA de Vendas com Jadi Lima, há 14 anos no ramo automotivo. Exclusiva para vendedores ou gerentes do ramo automotivo. 60 dias de acompanhamento, formato on-line. Módulos: posicionamento — onde estou, onde quero chegar; tráfego pago; funil de vendas para dobrar suas vendas; 24 horas, mentalidade de venda. Início: 29/11/2026.">
+      <button class="registration-trigger" type="button" aria-haspopup="dialog" aria-controls="registration">
+        <span class="sr-only">Realizar seu cadastro na mentoria</span>
+      </button>
+    </div>
+    <noscript><p class="noscript">Ative o JavaScript para preencher o cadastro ou <a href="https://wa.me/558193034159">fale conosco pelo WhatsApp</a>.</p></noscript>
+  </main>
+
+  <dialog id="registration" aria-labelledby="registration-title" aria-describedby="registration-description">
+    <div class="dialog-content">
+      <button class="close-dialog" type="button" aria-label="Fechar cadastro"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+      <header>
+        <p class="eyebrow">MENTORIA DNA DE VENDAS</p>
+        <h1 id="registration-title">Seu próximo passo<br><span>começa aqui.</span></h1>
+        <p id="registration-description">Preencha seu cadastro para falar com a nossa equipe.</p>
+      </header>
+      <div class="investment"><div><span class="investment-label">INVESTIMENTO</span><strong>R$ 497<span>,00</span></strong></div><p>60 dias de acompanhamento<br><b>100% on-line</b></p></div>
+      <form id="registration-form">
+        <div class="fields">
+          <div class="field full"><label for="full-name">Nome completo</label><input id="full-name" name="fullName" type="text" autocomplete="name" placeholder="Seu nome e sobrenome" required minlength="3" maxlength="120" autofocus></div>
+          <div class="field"><label for="phone">Telefone</label><input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(81) 99999-9999" required maxlength="22" aria-describedby="phone-hint"><small id="phone-hint">Informe o número com DDD.</small></div>
+          <div class="field"><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email" placeholder="voce@exemplo.com" required maxlength="160"></div>
+          <div class="field"><label for="store">Loja em que trabalha</label><input id="store" name="store" type="text" autocomplete="organization" placeholder="Nome da loja" required maxlength="160"></div>
+          <div class="field"><label for="sales">Média de vendas</label><input id="sales" name="sales" type="text" placeholder="Ex.: 10 vendas/mês" required maxlength="100" aria-describedby="sales-hint"><small id="sales-hint">Informe a quantidade ou o valor mensal.</small></div>
+        </div>
+        <fieldset class="payment"><legend>Como deseja pagar?</legend><div class="payment-options">
+          <label class="payment-option"><input type="radio" name="payment" value="Pix" required><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="4.5" y="4.5" width="15" height="15" rx="3" transform="rotate(45 12 12)"/><path d="m5 12 4-3 3 3 3-3 4 3M5 12l4 3 3-3 3 3 4-3"/></svg>Pix</span></label>
+          <label class="payment-option"><input type="radio" name="payment" value="Cartão" required><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="3"/><path d="M3 10h18M6 15h4"/></svg>Cartão</span></label>
+          <label class="payment-option"><input type="radio" name="payment" value="Boleto" required><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 5v14M6 5v14M10 5v14M12 5v14M16 5v14M20 5v14M22 5v14"/></svg>Boleto</span></label>
+        </div></fieldset>
+        <p class="form-status" id="form-status" role="status">Preencha todos os campos e escolha a forma de pagamento.</p>
+        <button class="submit-button" type="submit" disabled aria-describedby="form-status">Enviar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></button>
+        <p class="privacy-note">Ao continuar, o WhatsApp abrirá com seus dados preenchidos. Confirme o envio por lá. O pagamento será combinado com a equipe.</p>
+      </form>
+    </div>
+  </dialog>
+</body>
+</html>
